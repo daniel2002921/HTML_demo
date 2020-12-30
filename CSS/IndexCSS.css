@@ -1,0 +1,220 @@
+body{
+            /*background-image: url('material/bg.jpg');*/
+         	/*background-color: #FFFFBB;*/
+         	margin:0px;
+			padding:0px;
+         	background:url('../material/BackGround.png') center center fixed no-repeat;
+            background-repeat:no-repeat;
+            background-size: cover;
+
+            font-size: 25px;
+ 			font-family: DFKai-sb;
+
+        }
+
+ span{
+
+font-size: 4vh;
+font-weight: bold;
+
+ }
+ 
+ p{
+ 	border: 2px yellow solid;
+ }
+
+
+
+.Info{
+	
+    width: 250px;
+    height: 1200px;
+    background-color: rgb(180, 198, 232);
+    position: absolute;
+    /* float: left; */
+    left: 0;
+    top: 0;
+    border: 2px green solid;
+
+}
+
+
+
+.chart_class{
+
+    width: 1500px;
+    height: 900px;
+    position: relative;
+    float: left;
+    border: 2px purple solid;
+    left: 253px;
+
+}
+
+
+
+.UserStatus{
+	text-align: center;
+
+	position: relative;
+	top:20px;
+	border:2px green solid;
+
+
+}
+
+.SelectGroup{
+
+text-align: center;
+position: relative;
+top:120px;
+color: white;
+border:2px green solid;
+
+
+
+
+}
+
+.SelectTheme{
+    width: 1500px;
+    height: 250px;
+    position: relative;
+    float: left;
+    border: 2px green solid;
+    left: 253px;
+
+}
+
+
+.Allbook{
+
+	background-color: white;
+    width: 250px;
+    height: 130px;
+    position: absolute;
+    top: 50px;
+    left: 110px;
+    border-radius: 15px;
+    border: 2px blue solid;
+
+}
+
+
+.Theme1{
+
+	background-color: white;
+    width: 250px;
+    height: 130px;
+    position: absolute;
+    top: 50px;
+    left: 460px;
+    border-radius: 15px;
+    border: 2px blue solid;
+
+
+}
+
+.Theme2{
+
+	background-color: white;
+    width: 250px;
+    height: 130px;
+    position: absolute;
+    top: 50px;
+    left: 830px;
+    border-radius: 15px;
+    border: 2px blue solid;
+
+
+}
+
+.Theme3{
+
+	background-color: white;
+    width: 250px;
+    height: 130px;
+    position: absolute;
+    top: 50px;
+    right: 22px;
+    border-radius: 15px;
+    border: 2px blue solid;
+
+}
+
+.ThemeBook_png{
+	width: 60px;
+    height: 60px;
+    top: 24%;
+    position: absolute;
+    float: left;
+
+}
+
+.Theme_text{
+	width: 150px;
+    height: 70px;
+    text-align: center;
+    position: absolute;
+    float: left;
+    top: 31px;
+    left: 87px;
+    font-size: 1.5rem;
+    border: 2px blue solid;
+}
+
+.img_class{
+	position: absolute;
+    float: left;
+    top: 33px;
+    left: 16px;
+    border: 2px green solid;
+    margin-right: 10px;
+}
+
+.chart1{
+
+	background-color: white;
+    width: 625px;
+    height: 330px;
+    position: absolute;
+    top: 50px;
+    left: 111px;
+    border-radius: 15px;
+    border: 2px blue solid;
+
+
+
+}
+
+
+.chart2{
+
+	background-color: white;
+    width: 625px;
+    height: 330px;
+    border-radius: 15px;
+    border: 2px green solid;
+    position: absolute;
+    left: 111px;
+    top: 450px;
+
+
+}
+
+
+.chart3{
+
+	background-color: white;
+    width: 625px;
+    height: 730px;
+    border-radius: 15px;
+    border: 2px green solid;
+    position: absolute;
+    left: 820px;
+    top: 50px;
+}
+
+}
+
+

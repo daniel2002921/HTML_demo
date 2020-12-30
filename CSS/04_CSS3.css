@@ -1,0 +1,78 @@
+/* 04_CSS3 */
+html, body{
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/*圓角、陰影、透明度*/
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 20px;
+	overflow: hidden;
+	margin: 15px 0; width: 100%; text-align: center; position: relative;
+}
+.card img{
+	opacity: 0.5;
+	width: 100%; vertical-align: middle;
+}
+.card p{
+	text-shadow: 0px 0px 10px #69aeb6;
+	padding: 10px;
+}
+
+.card.noCSS3{ box-shadow: none; border-radius: 0;
+}
+.card.noCSS3 img{ opacity: 1;}
+.card.noCSS3 p{ text-shadow: none;}
+
+/*漸層背景*/
+.Gra{ height: 300px;}
+.lineGra{ background: -webkit-linear-gradient(right bottom, yellow, red);}
+.circleGra{ background: radial-gradient(ellipse, #fff, #ccc, #999, #666, #333, #000);}
+.repeatGra{ background: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px);}
+
+/*多重背景*/
+.multi_bg_example{
+	background-image: url(../images/firefox.png),
+					  url(../images/bubbles.png),
+					  linear-gradient(to right, rgba(30, 75, 115, 1),  rgba(255, 255, 255, 0));
+
+	background-repeat: no-repeat,
+					   no-repeat,
+					   no-repeat;
+
+	background-position: bottom right,
+					     left,
+					     right;
+	height: 250px;
+}
+
+/*變形*/
+.tranformTarget{ border: solid 3px #AAA; background: #e8f2fd; color: #789ac0;}
+.rotate{ transform: rotate(3deg);}
+.scale{ transform: scaleY(2);}
+.skew{ transform: skewX(20deg);}
+.translate{ transform: translate(60px,20px);}
+.tranform{ transform: translate(30px) rotate(-5deg) scale(0.8);}
+
+/*轉場*/
+.box { /*開始狀態*/
+	background: #2db34a;
+	transition : 1.5s ;
+}
+.box:hover{ /*結束狀態*/
+	background: #ff2956;
+}
+
+/*動畫*/
+.animation{
+	animation: 1s fat;
+	animation-iteration-count: infinite; /*循環播放*/
+	height: 200px; background: #d9bc9d;
+}
+@keyframes fat{
+	0% { width: 100px;}
+	50% { width: 150px;}
+	100% { width: 100%;}
+}

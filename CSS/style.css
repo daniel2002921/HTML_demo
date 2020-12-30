@@ -1,0 +1,29 @@
+/*通用CSS*/
+
+*{ line-height: 30px; font-family: 微軟正黑體,Arial;}
+h1{
+	color: rgb(55,150,191);
+    border-left: solid 7px;
+    margin: 20px 10px;
+    padding: 10px;
+    background: #fffdef;
+}
+h3{ color: rgb(216,159,57); background: linear-gradient(transparent 0%, transparent 60%, #faeedc 60%);}
+h3 b{ color: #ef7106;}
+textarea{ width: 100%; height: 150px; border: none;}
+.DEMOblock>div{ display: inline-block; vertical-align: top; width: 90%; padding: 15px;}
+/*分欄*/
+.DEMOblock2>div{ width: calc(90%/2);}
+.DEMOblock3>div{ width: calc(90%/3);}
+.DEMOblock4>div{ width: calc(85%/4);}
+.DEMOblock5>div{ width: calc(85%/5);}
+/*比較*/
+.compare>div{ border-right: solid 1px #CCC;}
+.compare>div:last-of-type{ border-right: 0;}
+.compare>div>div{ border: dotted 1px #CCC;}
+
+/*延伸區塊*/
+.bonus{ position: relative;}
+.bonus::before, .bonus::after{ content: ""; display: inline-block; position: absolute;}
+.bonus::before{ width: 10px; height: 1px; background: #AAA; top: 49%; left: -5px;}
+.bonus::after{ width: 0; height: 0; border-width: 5px; border-style: solid; border-color: transparent transparent transparent #AAA; top: 47.7%; left: 5px;}

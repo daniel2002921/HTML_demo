@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/04_CSS3.css">
+    <style type="text/css">
+        
+        *{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!--------------------------   1     -------------------------->
+    <div class="DEMOblock DEMOblock4">
+        <h1>CSS3</h1>
+        <div class="classify" >
+            <a href="./HTML.html" >Html</a>
+            <a href="./CSS2.html" >CSS</a>
+            <a href="./MasonryCSS/examples/demoPage.html" >Html+CSS</a>
+            <a href="./login.html" >前後網頁端傳值</a>
+            <p>-------------------------------------------------------------</p>
+      </div>
+        <h3 style="margin:17.5px;">區塊/文字效果：</h3>
+        <div>   
+            <h4>無CSS3屬性</h4>
+            <div>
+                <div class="card noCSS3">
+                    <img src="images/rock600x400.jpg" alt="Norway">
+                    <p>Hardanger, Norway</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>圓角、陰影、透明度</h4>
+            <div>
+                <div class="card">
+                    <img src="images/rock600x400.jpg" alt="Norway">
+                    <p>Hardanger, Norway</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div>
+                <h4>標籤：</h4>
+<!--s--->
+                <textarea style="height:200px;">
+<div class="card">
+    <img src="images/rock600x400.jpg" alt="Norway">
+    <p>Hardanger, Norway</p>
+</div></textarea>
+<!--e--->
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h4>CSS：</h4>
+<!--s--->
+                <textarea style="height:540px;">
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0; width: 100%; text-align: center; position: relative;
+}
+.card img{
+    opacity: 0.5;
+    width: 100%; vertical-align: middle;
+}
+.card p{
+    text-shadow: 0px 0px 10px #69aeb6;
+    padding: 10px;
+}</textarea>
+<!--e--->
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------   2     -------------------------->
+    <div class="DEMOblock DEMOblock3">
+        <h1>CSS3 漸層背景</h1>
+        <div>
+            <h3>線性漸層：</h3>
+            <div>
+                <div class="Gra lineGra"></div>
+            </div>
+<!--s--->
+            <textarea>
+background: -webkit-linear-gradient(right bottom, yellow, red);</textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h3>圓形(徑向)漸層：</h3>
+            <div>
+                <div class="Gra circleGra"></div>
+            </div>
+<!--s--->
+            <textarea>
+background: radial-gradient(ellipse, #fff, #ccc, #999, #666, #333, #000);</textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h3>重複漸層：</h3>
+            <div>
+                <div class="Gra repeatGra"></div>
+            </div>
+<!--s--->
+            <textarea style="height:220px;">
+background: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px);</textarea>
+<!--e--->
+        </div>
+    </div>
+
+    <!--------------------------   3     -------------------------->
+    <div class="DEMOblock DEMOblock3">
+        <h1>CSS3 多重背景</h1>
+        <div>
+            <h4>效果</h4>
+            <div>
+                <div class="multi_bg_example"></div>
+            </div>
+        </div>
+
+        <div>
+            <h4>標籤：</h4>
+<!--s--->
+            <textarea>
+<div class="multi_bg_example"></div></textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h4>CSS：</h4>
+<!--s--->
+            <textarea style="height:450px;">
+.multi_bg_example{
+    background-image: url(../images/firefox.png),
+                      url(../images/bubbles.png),
+                      linear-gradient(to right, rgba(30, 75, 115, 1),  rgba(255, 255, 255, 0));
+
+    background-repeat: no-repeat,
+                       no-repeat,
+                       no-repeat;
+
+    background-position: bottom right,
+                         left,
+                         right;
+    height: 250px;
+}</textarea>
+<!--e--->
+        </div>
+    </div>
+
+    <!--------------------------   4     -------------------------->
+    <div class="DEMOblock DEMOblock5">
+        <h1>transform 變形</h1>
+        <div>
+            <h3>旋轉：</h3>
+            <div>
+                <p class="tranformTarget rotate">我是文字</p>
+            </div>
+<!--s--->
+            <textarea style="height:80px;">
+transform: rotate(3deg);</textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h3>縮放：</h3>
+            <div>
+                <p class="tranformTarget scale">我是文字</p>
+            </div>
+<!--s--->
+            <textarea style="height:80px;">
+transform: scaleY(2);</textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h3>傾斜：</h3>
+            <div>
+                <p class="tranformTarget skew">我是文字</p>
+            </div>
+<!--s--->
+            <textarea style="height:80px;">
+transform: skewX(20deg);</textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h3>移動：</h3>
+            <div>
+                <p class="tranformTarget translate">我是文字</p>
+            </div>
+<!--s--->
+            <textarea style="height:80px;">
+transform: translate(60px,20px);</textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h3>綜合：</h3>
+            <div>
+                <p class="tranformTarget tranform">我是文字</p>
+            </div>
+<!--s--->
+            <textarea style="height:80px;">
+transform: translate(30px) rotate(-5deg) scale(0.8);</textarea>
+<!--e--->
+        </div>
+    </div>
+
+    <!--------------------------   5     -------------------------->
+    <div class="DEMOblock DEMOblock3">
+        <h1>CSS3 transition 過渡/轉場</h1>
+        <div>
+            <h4>效果</h4>
+            <div>
+                <div class="box">滑鼠移到這會變色</div>
+            </div>
+        </div>
+
+        <div>
+            <h4>標籤：</h4>
+<!--s--->
+            <textarea>
+<div class="box">滑鼠移到這會變色</div></textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h4>CSS：</h4>
+<!--s--->
+            <textarea style="height:210px;">
+.box { /*開始狀態*/
+    background: #2db34a;
+    transition : 1.5s ;
+}
+.box:hover{ /*結束狀態*/
+    background: #ff2956;
+}</textarea>
+<!--e--->
+        </div>
+    </div>
+
+    <!--------------------------   6     -------------------------->
+    <div class="DEMOblock DEMOblock3">
+        <h1>CSS3 animation 動畫</h1>
+        <div>
+            <h4>效果</h4>
+            <div>
+                <div class="animation"></div>
+            </div>
+        </div>
+
+        <div>
+            <h4>標籤：</h4>
+<!--s--->
+            <textarea>
+<div class="animation"></div></textarea>
+<!--e--->
+        </div>
+
+        <div>
+            <h4>CSS：</h4>
+<!--s--->
+            <textarea style="height:340px;">
+.animation{
+    animation: 1s fat;
+    animation-iteration-count: infinite; /*循環播放*/
+    height: 200px; background: #d9bc9d;
+}
+
+@keyframes fat{
+    0% { width: 100px;}
+    50% { width: 150px;}
+    100% { width: 200px;}
+}</textarea>
+<!--e--->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<html>
+<head>
+	<title>前後網頁端傳值</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" type="text/css" href="./CSS/aoci_css.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+ 
+
+
+</head>
+
+<body>
+  <div>
+    <h1 align="center">
+      前後網頁端傳值
+    </h1>
+  </div>
+  <div class="classify" align="center">
+    <a href="./HTML.html" >Html</a> 
+    <a href="./CSS2.html" >CSS</a>
+    <a href="./MasonryCSS/examples/demoPage.html" >Html+CSS</a>
+    <a href="./login.html" >前後網頁端傳值</a>
+    <p>-----------------------------------------------------------------------------</p>
+  </div>
+
+	<form name="form1" id="form1" method="post" action="login_html.php" >
+		<p align="center">帳號：
+			<input name="account" type="text" id="account" />
+		</p>
+		<p align="center">密碼：
+			<input name="password" type="password" id="password" />
+		</p>
+		
+    <p align="center">
+    <input type = "radio"  name = "sex"  value = "男" checked style="width: 25px;height: 25px;">男
+
+    <input type = "radio"  name = "sex" size="25" value = "女" style="width: 25px;height: 25px;">女
+    </p>
+
+    <!-- <p align="center">
+    <input  type = "checkbox"  name = "interest"  value = "read1" checked style="width: 25px;height: 25px;">   多選一
+
+    <input  type = "checkbox"  name = "interest2"  value = "read2" style="width: 25px;height: 25px;" >   多選二
+
+    <input  type = "checkbox"  name = "interest"  value = "read3" style="width: 25px;height: 25px;" >   多選三
+    </p> -->
+
+    <p align="center">
+      <input type="submit" name="Submit" size="30" value="送出" style="font-size: 2rem;" />
+    </p>
+	</form>
+
+  <p align="center">-------------------------------------------------------------------------</p>
+  <div align="center">
+    <h1>Ajax部份更新網頁內容</h1>
+    <form name="form2" id="form2" style="font-size: 2rem;" method="post" action="./adduser.php">
+      
+      Account:<input type="text" name="new_account"  >
+      <br>
+      Password:<input type="text" name="new_password" >
+      <br>
+      Phone:<input type="text" name="new_phone"  onkeyup="value=value.replace(/[^\d]/g,'') ">
+      <br>
+      <input type="submit" name="submit" value="新增用戶" style="width: 200px; font-size: 2rem;  ">
+
+    </form>
+
+    <button onclick="DBselect()" style="font-size: 2rem;">撈取全部使用者資料</button>
+    <table class="data_table" border="1" style="font-size: 2rem;">
+      <tbody class="data_tbody" >
+        
+      </tbody>
+    </table>
+
+  </div>
+
+
+
+
+</body>
+
+
+
+
+
+<script type="text/javascript">
+
+
+var bool =false;
+function DBselect(check) {
+
+  $.ajax({
+      type: 'POST',
+      url: './ajaxall.php',
+      
+      success: function(data) {
+        var json_data = JSON.parse(data);
+        
+         console.log(json_data);
+        //  console.log(typeof(json_data));
+        if (bool==false) {
+
+          $.each(json_data[0], function(key, value) {
+                $(".data_tbody").append("<th>" + key + "</th>");
+            });
+
+          $.each(json_data, function(index) {
+            $(".data_table").append("<tr>");
+            $.each(json_data[index], function(key, value) {
+                $(".data_tbody").append("<td>" + value + "</td>");
+            });
+            $(".data_table").append("</tr>");
+          });
+
+
+          bool = true;
+        }
+
+
+      },
+      error: function(error) {
+        
+      }
+  });
+
+
+  
+}
+
+
+	
+	$('#form2').submit(function(event){
+  event.preventDefault();
+  var $form = $(this);
+
+  $.ajax({
+      type: 'POST',
+      url: $form.attr('action'),
+      data: $form.serialize(),
+      success: function(data) {
+      	if (data==1) {
+          alert("新增成功");
+          var all_Inputs = $("input[type=text]");
+          all_Inputs.val(""); //新增完畢後清除text內容
+
+        }
+        else{
+          alert("新增失敗");
+        }
+      },
+      error: function(error) {
+        
+      }
+  });
+});
+</script>
+</html>

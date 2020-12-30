@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML展示</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="./CSS/aoci_css.css">
+</head>
+<body>
+	<div>
+		<h1>HTML功能</h1>
+	</div>
+	<div class="classify">
+		<a href="./HTML.html" >Html</a>
+	    <a href="./CSS2.html" >CSS</a>
+	    <a href="./MasonryCSS/examples/demoPage.html" >Html+CSS</a>
+	    <a href="./login.html" >前後網頁端傳值</a>
+	</div>
+	<p>-----------------------------------------------------------------------------</p>
+	<div class="flex-container">
+		<div class="class1">
+			<h3>文字</h3>
+			文字內容展示
+		</div>
+
+		<div class="table1">
+			<h3>表格table</h3>
+			<table border="1">
+				<tr>
+					<th>姓名</th>
+					<th>電話</th>
+					<th>居住地</th>
+				</tr>
+				<tr>
+					<td>daniel</td>
+					<td>0912-345-678</td>
+					<td>台北市</td>
+				</tr>
+				<tr>
+					<td>Andy</td>
+					<td>0987-654-321</td>
+					<td>新竹市</td>
+				</tr>
+
+			</table>
+		</div>
+
+		<div class="form1">
+			<h3>Form表單</h3>
+			
+			<form>
+				
+				<input type = "text" name = "username"  size = "25"  maxlength ="10">
+				<br>
+				<input type="password" name="password" size="25" max="10">
+				<br>
+				<input type = "radio"  name = "sex"  value = "male" checked style="width: 25px;height: 25px;">男
+
+				<input type = "radio"  name = "sex" size="25" value = "male" style="width: 25px;height: 25px;" >女
+				<br>
+
+				<input  type = "checkbox"  name = "interest"  value = "read" checked style="width: 25px;height: 25px;">   多選一
+
+				<input  type = "checkbox"  name = "interest"  value = "read" style="width: 25px;height: 25px;" >   多選二
+
+				<input  type = "checkbox"  name = "interest"  value = "read" style="width: 25px;height: 25px;" >   多選三
+			</form>
+
+		</div>
+
+	</div>
+
+	<div class="flex-container2">
+
+		<div class="select1">
+			
+			<h3>下拉式選單</h3>
+			<select>
+				
+				<option>選項一</option>
+				<option>選項二</option>
+				<option>選項三</option>
+
+			</select>
+
+		</div>
+
+		<div class="calendar">
+
+			<h3>日曆</h3>
+			
+			<input type="date" style="font-size: 2rem;">
+		</div>
+
+
+		<div class="video">
+			<h3>內嵌影片</h3>
+			<iframe width="420" height="300"
+			src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+			</iframe>			
+		</div>
+
+		<div class="canvas">
+
+			<h3>Canvas</h3>
+
+			<canvas id="myCanvas" width="200" height="410" style="border:1px solid #c3c3c3;">
+			Your browser does not support the canvas element.
+			</canvas>
+			
+		</div>
+		
+
+	</div>
+
+
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+	var c=document.getElementById("myCanvas");
+	var cxt=c.getContext("2d");
+	cxt.moveTo(10,100);
+	cxt.lineTo(150,350);
+	cxt.lineTo(10,250);
+	cxt.stroke();
+</script>
+</html>

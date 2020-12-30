@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我要學會HTML！</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+	<button onclick="show()">點擊</button>
+	<p id="demo"></p>
+
+	<h1>我要學會HTML!</h1>
+
+	<p>動手做是最好的學習方法</p>
+
+	<h2>清單 Lists</h2>
+
+	<p>這是沒有順序的項目符號清單</p>
+
+	<ul>
+		<li>這是沒有順序的清單</li>
+		<li>以ul元來定義清單的範圍</li>
+		<li>用li標示各別項目</li>
+	</ul>
+
+	<p>這是有數字順序的清單</p>
+
+	<ol>
+		<li>這是有順序的清單</li>
+		<li>以ol元來定義清單的範圍</li>
+		<li>一樣用li標示各別項目</li>
+	</ol>
+
+	<h2>行內元素</h2>
+
+	<p>校長說:Coding哪裡都可以學,真正重要的是你的<em>Mindset!</em></p>
+	<p>再說一次:Codin哪裡都可以學,真正重要的是你的<strong>Mindset!</strong></p>
+	<em><strong>You need to get it done!</strong></em>
+
+	<h2>空元素</h2>
+
+	祝你在大航道學習愉快!<br/>ALPHA Camp
+
+	<hr/>
+	恭喜你學完了HTML基本元素,就是這麼簡單!
+
+</body>
+
+<script type="text/javascript">
+
+	
+
+	$.ajax({
+      type: 'POST',
+      url: "http://localhost/index.php",
+      data: $form.serialize(),
+      success: function(data) {
+      	
+      },
+      error: function(error) {
+        
+      }
+
+  });
+
+
+
+	// document.getElementById('demo').innerHTML = 'hello';
+
+	// $('#demo').text('hello');
+
+
+
+
+
+	
+</script>
+</html>
